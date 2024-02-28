@@ -11,5 +11,5 @@ interface NewsAPI {
                 "&nojsoncallback=1" +
                 "&extras=url_s"
     )
-    suspend fun fetchNews(): String
+    suspend fun fetchNews(): NewsResponse
 }

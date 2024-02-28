@@ -12,7 +12,6 @@ import com.example.newsapi.api.NewsAPI
 import com.example.newsapi.databinding.FragmentNewsArticleBinding
 import kotlinx.coroutines.launch
 import retrofit2.Retrofit
-import retrofit2.converter.scalars.ScalarsConverterFactory
 import retrofit2.create
 
 
@@ -39,7 +38,7 @@ class NewsArticleFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewLifecycleOwner.lifecycleScope.launch {
-            val response = NewsRepository().fetchContents()
+            val response = NewsRepository().fetchContent()
             Log.d(TAG, "Response received: $response")
         }
     }
